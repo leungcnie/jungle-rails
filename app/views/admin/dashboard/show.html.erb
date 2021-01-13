@@ -1,4 +1,35 @@
-<h1>Admin >> Dashboard</h1>
-<p>Number of products: <%= @product_count %></p>
-<p>Number of categories: <%= @category_count %></p>
-<%= link_to 'Products', admin_products_path, class: "btn btn-primary" %>
+<section class="admin-dashboard-show">
+
+  <header class="page-header">
+    <h1>Admin &raquo; Dashboard</h1>
+  </header>
+
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td>
+          <strong>PRODUCTS COUNT:</strong>
+        </td>
+        <td>
+          <%= @product_count %>
+        </td>
+        <td>
+          <%= link_to 'View All Products', admin_products_path, class: "btn btn-primary" %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>CATEGORIES COUNT:</strong>
+        </td>
+        <td>
+          <%= @category_count %>
+        </td>
+        <td>
+          <%= link_to 'View All Categories', admin_categories_path, class: "btn btn-primary" %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
+
